@@ -1,12 +1,12 @@
-import type { Component } from 'solid-js';
+import type { Component } from "solid-js";
 
-import logo from './logo.svg';
-import styles from './App.module.css';
-import * as m from "./paraglide/messages.js"
-import { setLanguageTag } from './paraglide/runtime';
+import logo from "./logo.svg";
+import styles from "./App.module.css";
+import * as m from "./paraglide/messages.js";
+import { setLanguageTag } from "./paraglide/runtime";
 
 const App: Component = () => {
-  setLanguageTag("en") 
+  setLanguageTag("en");
   return (
     <div class={styles.App}>
       <header class={styles.header}>
@@ -14,7 +14,7 @@ const App: Component = () => {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <p>{m.greeting({name: "Yorukot"})}</p>
+        <p>{m.greeting({ name: "Yorukot" })}</p>
         <a
           class={styles.link}
           href="https://github.com/solidjs/solid"
