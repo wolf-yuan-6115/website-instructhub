@@ -1,7 +1,7 @@
 import type { Component } from "solid-js";
 import { createSignal, onMount } from "solid-js";
 
-import styles from "./ToggleTheme.module.css";
+import styles from "@/src/components/ToggleTheme.module.css";
 
 import Moon from "lucide-solid/icons/moon";
 import Sun from "lucide-solid/icons/sun";

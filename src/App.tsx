@@ -1,16 +1,17 @@
 import type { Component } from "solid-js";
 
-import styles from "./App.module.css";
-import "./index.css";
-import * as m from "./paraglide/messages.js";
-import { setLanguageTag } from "./paraglide/runtime";
-import ToggleTheme from "./components/ToggleTheme";
+import styles from "@/src/App.module.css";
+import "@/src/index.css";
+import * as m from "@/src/paraglide/messages.js";
+import { setLanguageTag } from "@/src/paraglide/runtime";
+import ToggleTheme from "@/src/components/ToggleTheme";
 
 
 const App: Component = () => {
 
   return (
     <div class={styles.container}>
+      {m.greeting({name: "SolidJS"})}
       <ToggleTheme />
     </div>
   );
