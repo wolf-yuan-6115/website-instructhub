@@ -7,12 +7,10 @@
     "start": "vite",
     "dev": "vite",
     "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && vite build",
-    "serve": "vite preview",
-    "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+    "serve": "vite preview"
   },
   "license": "MIT",
   "devDependencies": {
-    "@inlang/paraglide-js": "1.11.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "solid-devtools": "^0.29.3",
@@ -22,6 +20,7 @@
     "vite-plugin-solid": "^2.10.2"
   },
   "dependencies": {
+    "@solid-primitives/i18n": "^2.1.1",
     "@solidjs/router": "^0.14.10",
     "@zag-js/accordion": "^0.75.0",
     "@zag-js/solid": "^0.75.0",

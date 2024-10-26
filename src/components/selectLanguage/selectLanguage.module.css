@@ -1,0 +1,12 @@
+.selectLanguageIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: var(--peach);
+    transition: transform 0.3s ease;
+  }
+  
+  .selectLanguageIcon:hover {
+    transform: scale(1.2);
+  }
+  
