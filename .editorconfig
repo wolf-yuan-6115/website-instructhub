@@ -1,0 +1,32 @@
+# .editorconfig
+
+# General settings
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# SolidJS Docs：JavaScript/TypeScript, HTML, CSS
+[*.{js,jsx,ts,tsx,html,css}]
+indent_style = space
+indent_size = 2
+
+# JSON and YAML
+[*.{json,yaml,yml}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+# Markdown 文件
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 2
+
+# Ignore minified files
+[*.min.{js,css}]
+indent_style = none
