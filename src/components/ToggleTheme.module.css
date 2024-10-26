@@ -1,4 +1,7 @@
 .toggleThemeIcon {
+  position: absolute;
+  top: 21px;
+  right: 112px;
   width: 24px;
   height: 24px;
   cursor: pointer;
