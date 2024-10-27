@@ -1,0 +1,76 @@
+.authHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.optionGroup {
+  display: flex;
+  gap: 15px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mantle);
+  z-index: 10;
+}
+
+.spotlightPeach {
+  width: 1183px;
+  height: 1183px;
+  border-radius: 50%;
+  position: fixed;
+  top: 20%;
+  left: -3%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(250, 179, 135, 0.5) 0%,
+    rgba(250, 179, 135, 0) 70%
+  );
+
+  z-index: 1;
+}
+
+.spotlightGreen {
+  width: 1183px;
+  height: 1183px;
+  border-radius: 50%;
+  position: fixed;
+  top: 70%;
+  left: 103%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle,
+    rgba(166, 277, 161, 0.3) 0%,
+    rgba(166, 277, 161, 0) 70%
+  );
+
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .spotlightPeach,
+  .spotlightGreen {
+    display: none;
+  }
+}
+
+@media (max-height: 700px) {
+  .spotlightPeach,
+  .spotlightGreen {
+    display: none; /* 隱藏這些元素 */
+  }
+}

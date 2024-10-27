@@ -61,7 +61,7 @@
 }
 
 body {
-  background-color: var(--crust);
+  background-color: var(--base);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: "Inter", sans-serif;

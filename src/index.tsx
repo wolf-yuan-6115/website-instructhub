@@ -4,6 +4,8 @@ import { render } from 'solid-js/web';
 import "@/src/index.css";
 import App from "@/src/App";
 import { Route, Router } from '@solidjs/router';
+import LoginModal from '@/src/page/auth/login/login';
+import AuthPageLayout from '@/src/page/auth/header';
 
 const root = document.getElementById('root');
 
@@ -17,8 +19,9 @@ render(
   () => (
       <Router>
           <Route path="/" component={App} />
-          <Route path="/hello-world" component={() => <div>Hello world!</div>} />
+          <Route path="/login-test" component={LoginModal} />
+          <Route path="/auth-layout" component={AuthPageLayout} />
       </Router>
   ),
-  document.getElementById("app")
+  root!
 );
