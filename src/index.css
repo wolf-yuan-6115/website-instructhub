@@ -58,6 +58,13 @@
   --pink: #f5bde6;
   --flamingo: #f0c6c6;
   --rosewater: #f4dbd6;
+
+  /* fixed color */
+  --white: #ffffff;
+  --black: #000000;
+  --github: #24292E;
+  --google: #0B57D0;
+  --gitlab: #7759C2;
 }
 
 body {
