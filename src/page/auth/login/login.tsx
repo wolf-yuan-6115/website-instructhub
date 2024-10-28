@@ -71,7 +71,7 @@ const LoginPage: Component = () => {
         Footer={
           <a href="/signup" class={styles.link}>
             {t("auth.login.dontHaveAnAccount")}
-            <p class={styles.footerMessageHighlight}>{t("auth.login.login")}</p>
+            <p class={styles.footerMessageHighlight}>{t("auth.signup.signup")}</p>
           </a>
         }
         Button={

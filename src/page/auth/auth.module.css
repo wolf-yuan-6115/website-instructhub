@@ -153,11 +153,11 @@
 }
 
 .linkForgotPassword {
-  color: rgb(var(--blue)); /* 根據你的主題顏色調整 */
+  color: rgb(var(--blue));
   font-weight: bold;
-  display: block; /* 使鏈接成為塊級元素以支持 margin */
-  margin-top: 1.2rem; /* 上方距離 */
-  text-align: center; /* 居中對齊 */
+  display: block;
+  margin-top: 1.2rem;
+  text-align: center;
 }
 
 .linkForgotPassword:hover {
