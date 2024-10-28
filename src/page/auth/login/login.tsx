@@ -32,32 +32,33 @@ const LoginModal: Component = () => {
   const t = useTranslate();
 
   return (
-    <div class={styles.loginModal}>
-      <div class={`${styles.title} ${styles["title"]}`}>
-        {t("auth.login.title")}
+    <div class={styles.container}>
+      <div class={styles.modal}>
+        <div class={styles.title}>{t("auth.login.title")}</div>
+
+        <div class={styles.buttonContainer}>
+          <For each={LoginButtonData}>
+            {(button) => (
+              <button class={`${styles.button} ${button.style}`}>
+                <img
+                  src={`/src/assets/svg/${button.icon}`}
+                  alt={`${button.message} icon`}
+                  class={styles.icon}
+                />
+                {t(button.message)}
+              </button>
+            )}
+          </For>
+        </div>
+
+        <div class={styles.lineWrapper}>
+          <div class={styles.divider} />
+          <div class={styles.dividerText}>or</div>
+          <div class={styles.divider} />
+        </div>
       </div>
 
-      {/* Use For to render all third-part login methods*/}
-      <For each={LoginButtonData}>
-        {(button) => (
-          <button class={`${styles.button} ${button.style}`}>
-            <img
-              src={`/src/assets/svg/${button.icon}`}
-              alt={`${button.message} icon`}
-              class={styles.icon}
-            />
-            {t(button.message)}
-          </button>
-        )}
-      </For>
-
-      {/* Line */}
-      <div class={styles.lineWrapper}>
-        <div class={styles.line} />
-        <div class={styles.linetext}>or</div>
-        <div class={styles.line} />
-      </div>
-      {/* Email login */}
+      <a class={styles.link}>{t("auth.login.forgotYourPassword")}</a>
     </div>
   );
 };
@@ -68,15 +69,17 @@ const LoginPage: Component = () => {
     <div>
       <AuthPageLayout
         Footer={
-          <a
-            href="/signup"
-            class={styles.footerLink}
-          >
-            {t("auth.dontHaveAmAccount")}<p class={styles.footerMessageHighlight}>{t("auth.signup.signup")}</p>
+          <a href="/signup" class={styles.link}>
+            {t("auth.login.dontHaveAnAccount")}
+            <p class={styles.footerMessageHighlight}>{t("auth.login.login")}</p>
           </a>
         }
         Button={
-          <button class={styles.unborderbutton}>{t("auth.signup.signup")}</button>
+          <a href="/signup">
+            <button class={styles.unborderbutton}>
+              {t("auth.signup.signup")}
+            </button>
+          </a>
         }
         Modal={<LoginModal />}
       />

@@ -1,4 +1,4 @@
-// Menu
+/* Menu */
 
 [data-scope='menu'][data-part='trigger'] {
   outline: none;

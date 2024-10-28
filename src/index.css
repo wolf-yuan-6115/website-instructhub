@@ -82,6 +82,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+html, body {
+  overflow: auto; /* 允許滾動 */
+  height: 100%; /* 確保高度100% */
+  margin: 0; /* 清除默認的margin */
+  padding: 0; /* 清除默認的padding */
+}
+
 * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }

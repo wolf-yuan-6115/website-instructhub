@@ -3,14 +3,15 @@ import { For } from "solid-js";
 import styles from "../auth.module.css";
 import { useTranslate } from "@/src/utils/i18n";
 import AuthPageLayout from "@/src/page/auth/layout";
+import Mail from "lucide-solid/icons/mail";
 
-interface LoginButton {
+interface SignupButton {
   message: "auth.google" | "auth.github" | "auth.gitlab";
   style: string;
   icon: string;
 }
 
-const LoginButtonData: LoginButton[] = [
+const SignupButtonData: SignupButton[] = [
   {
     message: "auth.google",
     style: styles.loginGoogle,
@@ -28,17 +29,15 @@ const LoginButtonData: LoginButton[] = [
   },
 ];
 
-const LoginModal: Component = () => {
+const SignupModal: Component = () => {
   const t = useTranslate();
 
   return (
-    <div class={styles.loginModal}>
-      <div class={`${styles.title} ${styles["title"]}`}>
-        {t("auth.login.title")}
-      </div>
+    <div class={styles.modal}>
+      <div class={styles.title}>{t("auth.signup.title")}</div>
 
       {/* Use For to render all third-part login methods*/}
-      <For each={LoginButtonData}>
+      <For each={SignupButtonData}>
         {(button) => (
           <button class={`${styles.button} ${button.style}`}>
             <img
@@ -52,36 +51,38 @@ const LoginModal: Component = () => {
       </For>
 
       {/* Line */}
-      <div class={styles.lineWrapper}>
-        <div class={styles.line} />
-        <div class={styles.linetext}>or</div>
-        <div class={styles.line} />
-      </div>
-      {/* Email login */}
+      <div class={styles.fullWidthDivider} />
+      {/* Email Signup */}
+      <button class={`${styles.button} ${styles.loginEmail}`}>
+        <Mail />
+        {t("auth.email")}
+      </button>
     </div>
   );
 };
 
-const LoginPage: Component = () => {
+const SignupPage: Component = () => {
   const t = useTranslate();
   return (
     <div>
       <AuthPageLayout
         Footer={
-          <a
-            href="/signup"
-            class={styles.footerLink}
-          >
-            {t("auth.dontHaveAmAccount")}<p class={styles.footerMessageHighlight}>{t("auth.signup.signup")}</p>
+          <a href="/login" class={styles.link}>
+            {t("auth.signup.alreadyHaveAnAccount")}
+            <p class={styles.footerMessageHighlight}>{t("auth.login.login")}</p>
           </a>
         }
         Button={
-          <button class={styles.unborderbutton}>{t("auth.signup.signup")}</button>
+          <a href="/login">
+          <button class={styles.unborderbutton}>
+            {t("auth.login.login")}
+          </button>
+          </a>
         }
-        Modal={<LoginModal />}
+        Modal={<SignupModal />}
       />
     </div>
   );
 };
 
-export default LoginPage;
+export default SignupPage;
