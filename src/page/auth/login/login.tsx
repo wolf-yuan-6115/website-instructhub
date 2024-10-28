@@ -61,6 +61,7 @@ const LoginModal: Component = () => {
           <input
             type="text"
             class={`${styles.inputField} ${styles.inputFieldUsername}`}
+
             placeholder={t("auth.login.username")}
           />
           <input
