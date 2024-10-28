@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        crust: "rgba(var(--crust))",
+        crust: "rgba(var(--crust), 1)",
         mantle: "rgba(var(--mantle))",
         base: "rgba(var(--base))",
         surface0: "rgba(var(--surface0))",

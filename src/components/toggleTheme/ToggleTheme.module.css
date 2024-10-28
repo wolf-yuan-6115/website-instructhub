@@ -1,9 +1,10 @@
 .toggleThemeIcon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5px;
   cursor: pointer;
-  color: var(--peach);
+  color: rgb(var(--peach));
   transition: transform 0.3s ease;
+  user-select: none;
 }
 
 .toggleThemeIcon:hover {

@@ -2,14 +2,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 1.2rem 1.5rem;
   position: relative;
   z-index: 10;
 }
 
 .optionGroup {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .footer {
@@ -21,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--mantle);
+  background-color: rgb(var(--mantle));
   z-index: 10;
 }
 
@@ -36,8 +49,8 @@
 
   background: radial-gradient(
     circle,
-    rgba(250, 179, 135, 0.5) 0%,
-    rgba(250, 179, 135, 0) 70%
+    rgba(var(--peach), 0.5) 0%,
+    rgba(var(--peach), 0) 70%
   );
 
   z-index: 1;
@@ -54,8 +67,8 @@
 
   background: radial-gradient(
     circle,
-    rgba(166, 277, 161, 0.3) 0%,
-    rgba(166, 277, 161, 0) 70%
+    rgba(var(--green), 0.3) 0%,
+    rgba(var(--green), 0) 70%
   );
 
   z-index: 1;

@@ -37,7 +37,7 @@ const SelectLanguage: Component = () => {
                 <span class="ml-2">{lang.name}</span>
               </div>
               {lang.value === locale() && (
-                <Check color="var(--green)" class="ml-2" />
+                <Check color="rgb(var(--green))" class="ml-2" />
               )}
             </Menu.Item>
           ))}

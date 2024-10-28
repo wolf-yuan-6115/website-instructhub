@@ -6,8 +6,8 @@
 
 [data-scope='menu'][data-part='content'] {
   outline: none;
-  background: var(--surface0);
-  border-radius: 10px;
+  background: rgb(var(--surface0));
+  border-radius: 0.5rem;
 }
 
 [data-scope='menu'][data-part='trigger']:focus {
@@ -15,16 +15,16 @@
 }
 
 [data-scope='menu'][data-part='item']:hover {
-  background: var(--surface2);
+  background: rgb(var(--surface2));
 }
 
 [data-scope='menu'][data-part='item'] {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 10px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 0.5rem;
+  color: rgb(var(--text))
 }
 
 [data-scope='menu'][data-part='content'][data-state='open'] {
