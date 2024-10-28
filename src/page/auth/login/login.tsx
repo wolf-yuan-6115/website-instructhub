@@ -56,6 +56,20 @@ const LoginModal: Component = () => {
           <div class={styles.dividerText}>or</div>
           <div class={styles.divider} />
         </div>
+        
+        <div class={styles.inputWrapper}>
+          <input
+            type="text"
+            class={`${styles.inputField} ${styles.inputFieldUsername}`}
+            placeholder={t("auth.login.username")}
+          />
+          <input
+            type="password"
+            class={styles.inputField}
+            placeholder={t("auth.login.password")}
+          />
+          <button class={styles.loginButton}>{t("auth.login.loginButton")}</button>
+        </div>
       </div>
 
       <a class={styles.link}>{t("auth.login.forgotYourPassword")}</a>
