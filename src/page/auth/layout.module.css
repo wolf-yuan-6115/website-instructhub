@@ -38,8 +38,8 @@
   min-height: min-content;
   max-width: fit-content;
   margin: auto;
+  padding: 10px;
 }
-
 
 .footer {
   position: fixed;
