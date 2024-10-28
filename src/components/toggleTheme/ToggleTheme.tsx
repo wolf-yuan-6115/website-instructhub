@@ -7,23 +7,26 @@ import Moon from "lucide-solid/icons/moon";
 import Sun from "lucide-solid/icons/sun";
 
 const ToggleTheme: Component = () => {
-  const [isDark, setIsDark] = createSignal(true);
+  const [theme, setTheme] = createSignal(localStorage.getItem("theme") || "dark");
 
   onMount(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
-      setIsDark(true);
+      setTheme("dark");
       document.body.classList.add("dark");
     } else {
-      setIsDark(false);
+      setTheme("light");
       localStorage.setItem("theme", "light");
       document.body.classList.add("light");
     }
+    setTimeout(() => {
+      document.documentElement.setAttribute("data-loaded", "true");
+    }, 500);
   });
 
   const toggleTheme = () => {
-    const newTheme = isDark() ? "light" : "dark";
-    setIsDark(!isDark());
+    const newTheme = theme() === "light" ? "dark" : "light";
+    setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
 
     document.body.classList.toggle("dark");
@@ -32,7 +35,7 @@ const ToggleTheme: Component = () => {
 
   return (
     <div class={styles.toggleThemeIcon} onClick={toggleTheme}>
-      {isDark() ? <Moon /> : <Sun />}
+      {theme() === "dark" ? <Moon /> : <Sun />}
     </div>
   );
 };

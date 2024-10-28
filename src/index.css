@@ -2,37 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.light {
-  --crust: 220, 224, 232;
-  --mantle: 230, 233, 239;
-  --base: 239, 241, 245;
-  --surface0: 204, 208, 218;
-  --surface1: 188, 192, 204;
-  --surface2: 172, 176, 190;
-  --overlay0: 156, 160, 176;
-  --overlay1: 140, 143, 161;
-  --overlay2: 124, 127, 147;
-  --subtext0: 108, 111, 133;
-  --subtext1: 92, 95, 119;
-  --text: 76, 79, 105;
-  --lavender: 114, 135, 253;
-  --blue: 30, 102, 245;
-  --sapphire: 32, 159, 181;
-  --sky: 4, 165, 229;
-  --teal: 23, 146, 153;
-  --green: 64, 160, 43;
-  --yellow: 223, 142, 29;
-  --peach: 254, 100, 11;
-  --maroon: 228, 69, 83;
-  --red: 210, 15, 57;
-  --mauve: 136, 57, 239;
-  --pink: 234, 118, 203;
-  --flamingo: 221, 120, 120;
-  --rosewater: 220, 138, 120;
-
-  --title: 0, 0, 0;
-}
-
 :root {
   --crust: 24, 25, 38;
   --mantle: 30, 32, 48;
@@ -76,6 +45,37 @@
   --title: 255, 255, 255;
 }
 
+.light {
+  --crust: 220, 224, 232;
+  --mantle: 230, 233, 239;
+  --base: 239, 241, 245;
+  --surface0: 204, 208, 218;
+  --surface1: 188, 192, 204;
+  --surface2: 172, 176, 190;
+  --overlay0: 156, 160, 176;
+  --overlay1: 140, 143, 161;
+  --overlay2: 124, 127, 147;
+  --subtext0: 108, 111, 133;
+  --subtext1: 92, 95, 119;
+  --text: 76, 79, 105;
+  --lavender: 114, 135, 253;
+  --blue: 30, 102, 245;
+  --sapphire: 32, 159, 181;
+  --sky: 4, 165, 229;
+  --teal: 23, 146, 153;
+  --green: 64, 160, 43;
+  --yellow: 223, 142, 29;
+  --peach: 254, 100, 11;
+  --maroon: 228, 69, 83;
+  --red: 210, 15, 57;
+  --mauve: 136, 57, 239;
+  --pink: 234, 118, 203;
+  --flamingo: 221, 120, 120;
+  --rosewater: 220, 138, 120;
+
+  --title: 0, 0, 0;
+}
+
 body {
   background-color: rgb(var(--base));
   color: rgb(var(--text));
@@ -83,12 +83,16 @@ body {
 }
 
 html, body {
-  overflow: auto; /* 允許滾動 */
-  height: 100%; /* 確保高度100% */
-  margin: 0; /* 清除默認的margin */
-  padding: 0; /* 清除默認的padding */
+  overflow: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 * {
+  transition: none;
+}
+
+[data-loaded="true"] * {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
