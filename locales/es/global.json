@@ -1,0 +1,4 @@
+{
+    "language_name": "English",
+    "hello": "hello {{ name }}, how are you?"
+}
