@@ -11,25 +11,24 @@ interface AuthPageLayoutProps {
 }
 
 const AuthPageLayout: Component<AuthPageLayoutProps> = (props) => {
-
-    return (
-      <div>
-        <header class={styles.authHeader}>
-          <img src="/src/assets/logo.png" alt="Logo" class="w-10 h-10" />
-          <div class={styles.optionGroup}>
-            <ToggleTheme />
-            <SelectLanguage />
-            {props.Button}
-          </div>
-        </header>
-        <div class={styles.modalContainer}>
-          <main class={styles.modal}>{props.Modal}</main>
+  return (
+    <div>
+      <header class={styles.authHeader}>
+        <img src="/src/assets/logo.png" alt="Logo" class="w-10 h-10" />
+        <div class={styles.optionGroup}>
+          <ToggleTheme />
+          <SelectLanguage />
+          {props.Button}
         </div>
-        <footer class={styles.footer}>{props.Footer}</footer>
-        <div class={styles.spotlightPeach}></div>
-        <div class={styles.spotlightGreen}></div>
+      </header>
+      <div class={styles.modalContainer}>
+        <main class={styles.modal}>{props.Modal} </main>
       </div>
-    );
+      <footer class={styles.footer}>{props.Footer}</footer>
+      <div class={styles.spotlightPeach}></div>
+      <div class={styles.spotlightGreen}></div>
+    </div>
+  );
 };
 
 export default AuthPageLayout;
