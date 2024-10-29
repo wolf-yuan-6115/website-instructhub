@@ -4,6 +4,7 @@ import styles from "../auth.module.css";
 import { useTranslate } from "@/src/utils/i18n";
 import AuthPageLayout from "@/src/page/auth/layout";
 import { Field } from "@ark-ui/solid/field";
+import Lock from "lucide-solid/icons/lock";
 
 interface LoginButton {
   message: "auth.google" | "auth.github" | "auth.gitlab";
@@ -60,11 +61,14 @@ const LoginModal: Component = () => {
 
         <div class={styles.inputWrapper}>
           <Field.Root>
-            <Field.Input type="text" placeholder={t("auth.login.username")}/>
+            <Field.Input type="text" placeholder={t("auth.login.username")} />
           </Field.Root>
 
           <Field.Root>
-            <Field.Input type="text" placeholder={t("auth.login.password")}/>
+            <div class={styles.inputWithIcon}>
+              <Lock class={styles.inputWithIconIcon}/>
+              <Field.Input class={styles.inputWithIconInput} type="text" placeholder={t("auth.login.password")} />
+            </div>
           </Field.Root>
           <button class={styles.loginButton}>
             {t("auth.login.loginButton")}
