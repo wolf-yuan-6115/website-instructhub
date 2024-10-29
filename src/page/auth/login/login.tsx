@@ -3,6 +3,7 @@ import { For } from "solid-js";
 import styles from "../auth.module.css";
 import { useTranslate } from "@/src/utils/i18n";
 import AuthPageLayout from "@/src/page/auth/layout";
+import { Field } from "@ark-ui/solid/field";
 
 interface LoginButton {
   message: "auth.google" | "auth.github" | "auth.gitlab";
@@ -56,20 +57,18 @@ const LoginModal: Component = () => {
           <div class={styles.dividerText}>or</div>
           <div class={styles.divider} />
         </div>
-        
-        <div class={styles.inputWrapper}>
-          <input
-            type="text"
-            class={`${styles.inputField} ${styles.inputFieldUsername}`}
 
-            placeholder={t("auth.login.username")}
-          />
-          <input
-            type="password"
-            class={styles.inputField}
-            placeholder={t("auth.login.password")}
-          />
-          <button class={styles.loginButton}>{t("auth.login.loginButton")}</button>
+        <div class={styles.inputWrapper}>
+          <Field.Root>
+            <Field.Input type="text" placeholder={t("auth.login.username")}/>
+          </Field.Root>
+
+          <Field.Root>
+            <Field.Input type="text" placeholder={t("auth.login.password")}/>
+          </Field.Root>
+          <button class={styles.loginButton}>
+            {t("auth.login.loginButton")}
+          </button>
         </div>
       </div>
 
@@ -86,7 +85,9 @@ const LoginPage: Component = () => {
         Footer={
           <a href="/signup" class={styles.link}>
             {t("auth.login.dontHaveAnAccount")}
-            <p class={styles.footerMessageHighlight}>{t("auth.signup.signup")}</p>
+            <p class={styles.footerMessageHighlight}>
+              {t("auth.signup.signup")}
+            </p>
           </a>
         }
         Button={
